@@ -26,3 +26,28 @@ enum class Direction(val di: Int, val dj: Int) {
 infix fun Pair<Int, Int>.moveTo(direction: Direction): Pair<Int, Int> {
     return first + direction.di to second + direction.dj
 }
+
+val URDL = listOf(
+    -1 to 0,
+    0 to 1,
+    1 to 0,
+    0, -1,
+)
+
+val AROUND = listOf(
+    -1 to -1,
+    -1 to 0,
+    -1 to 1,
+    0 to 1,
+    1 to 1,
+    1 to 0,
+    1 to -1,
+    0 to -1,
+)
+
+val CORNERS = listOf(
+    -1 to -1,
+    -1 to 1,
+    1 to 1,
+    1 to -1,
+)
